@@ -16,7 +16,12 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-int* randvect(int length);
+unsigned char* randbytes(long bytes);
+
+int* randints(int num);
+
+float* randfloats(int num);
+
 
 
 #endif //RANDVECT_H
