@@ -1,0 +1,78 @@
+
+./bin/obj/helloworld.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	bf 00 00 00 00       	mov    $0x0,%edi
+   9:	b8 00 00 00 00       	mov    $0x0,%eax
+   e:	e8 00 00 00 00       	callq  13 <main+0x13>
+  13:	b8 00 00 00 00       	mov    $0x0,%eax
+  18:	5d                   	pop    %rbp
+  19:	c3                   	retq   
+
+Disassembly of section .rodata:
+
+0000000000000000 <.rodata>:
+   0:	48                   	rex.W
+   1:	65 6c                	gs insb (%dx),%es:(%rdi)
+   3:	6c                   	insb   (%dx),%es:(%rdi)
+   4:	6f                   	outsl  %ds:(%rsi),(%dx)
+   5:	20 57 6f             	and    %dl,0x6f(%rdi)
+   8:	72 6c                	jb     76 <main+0x76>
+   a:	64 21 00             	and    %eax,%fs:(%rax)
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%rdi)
+   3:	43 3a 20             	rex.XB cmp (%r8),%spl
+   6:	28 47 4e             	sub    %al,0x4e(%rdi)
+   9:	55                   	push   %rbp
+   a:	29 20                	sub    %esp,(%rax)
+   c:	31 30                	xor    %esi,(%rax)
+   e:	2e 33 2e             	xor    %cs:(%rsi),%ebp
+  11:	31 20                	xor    %esp,(%rax)
+  13:	32 30                	xor    (%rax),%dh
+  15:	32 31                	xor    (%rcx),%dh
+  17:	30 34 32             	xor    %dh,(%rdx,%rsi,1)
+  1a:	32 20                	xor    (%rax),%ah
+  1c:	28 52 65             	sub    %dl,0x65(%rdx)
+  1f:	64 20 48 61          	and    %cl,%fs:0x61(%rax)
+  23:	74 20                	je     45 <main+0x45>
+  25:	31 30                	xor    %esi,(%rax)
+  27:	2e 33 2e             	xor    %cs:(%rsi),%ebp
+  2a:	31                   	.byte 0x31
+  2b:	2d                   	.byte 0x2d
+  2c:	31 29                	xor    %ebp,(%rcx)
+	...
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	00 00                	add    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	01 7a 52             	add    %edi,0x52(%rdx)
+   b:	00 01                	add    %al,(%rcx)
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    %ebx,(%rbx)
+  11:	0c 07                	or     $0x7,%al
+  13:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 1c 00             	add    %bl,(%rax,%rax,1)
+  1e:	00 00                	add    %al,(%rax)
+  20:	00 00                	add    %al,(%rax)
+  22:	00 00                	add    %al,(%rax)
+  24:	1a 00                	sbb    (%rax),%al
+  26:	00 00                	add    %al,(%rax)
+  28:	00 41 0e             	add    %al,0xe(%rcx)
+  2b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
+  31:	55                   	push   %rbp
+  32:	0c 07                	or     $0x7,%al
+  34:	08 00                	or     %al,(%rax)
+	...
